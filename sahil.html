@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Option Vega Exposure across Strikes and Expirations",
+  "data": {
+    "values": [
+      {"strike": 90, "expiration": "2025-05", "vega": 0.12},
+      {"strike": 95, "expiration": "2025-05", "vega": 0.18},
+      {"strike": 100, "expiration": "2025-05", "vega": 0.25},
+      {"strike": 105, "expiration": "2025-05", "vega": 0.15},
+      {"strike": 110, "expiration": "2025-05", "vega": 0.10},
+      {"strike": 100, "expiration": "2025-06", "vega": 0.30},
+      {"strike": 105, "expiration": "2025-06", "vega": 0.28},
+      {"strike": 110, "expiration": "2025-06", "vega": 0.20},
+      {"strike": 115, "expiration": "2025-06", "vega": 0.12}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "strike", "type": "ordinal", "title": "Strike Price"},
+    "y": {"field": "vega", "type": "quantitative", "title": "Vega Exposure"},
+    "color": {"field": "expiration", "type": "nominal", "title": "Expiration"}
+  }
+}
